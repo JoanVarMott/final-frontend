@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+   box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    background-color: #f5e1ce;
+    color: rgb(0, 0, 0);
+  }
+  
+  h2{
+    font-size: 20px;
+  }
+
+  .logo {
+    /* Estilos para la sección del logo */
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .sobre-nosotros {
+    /* Estilos para la sección "Sobre nosotros" */
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    
+  }
+  
+li{
+    /* Estilos para la sección "Sobre nosotros" */
+    list-style-type: none; ;
+  }
+
+  .redes {
+    /* Estilos para la sección de redes sociales */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    
+  }
+  
+  .icon-footer{
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-evenly;
+    padding: 2rem;
+    /* box-shadow: ; */
+  }
+
+  a{
+    color: rgb(75, 67, 67);
+    text-decoration: none;
+  }
+  a:hover{
+    color: #98b0b2;
+    /* font-size: 20px; */
+  }
+
+  @media(max-width:901px){
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        background-color: #f5e1ce;
+        padding: 20px;
+      }
+  }
+
+  @media(max-width:400px){
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        background-color: #f5e1ce;
+        padding: 20px;
+      }
+
+      .icon-footer{
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:space-around;
+        padding: 2rem;
+      }
+  }

@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Madimi+One&family=Source+Code+Pro&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+}
+
+header{
+    background-color: #f5e1ce;
+    box-shadow:  0 2px 2px rgba(0,0,0,0.2);
+}
+nav{
+    width: 100%;
+    
+}
+
+nav ul{
+    /* background-color: azure; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.hola{
+    padding: 10px;
+    background-color: #e1edee;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+}
+
+nav ul li:first-child{
+    color: rgb(2, 2, 2);
+    font-family: "Dancing Script";
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+nav ul li:last-child{
+    text-decoration: none;
+}
+li{
+    font-size: 1rem;
+    list-style: none;
+    
+}
+
+li:hover{
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+nav ul li i{
+    font-size: 2rem;
+}
+
+nav ul li i:hover{
+    color: #0a0a0a;
+    cursor: pointer;
+}
+
+/* carrito de compras video 1*/
+.nav-card{
+    display: none;
+}
+
+.buy-card button{
+    display: none;
+}
+
+.nav-card li.carrito{
+    list-style: none;
+    padding: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+nav ul.menu-options li i:hover > .buy-card{
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+}
+
+nav ul.menu-options li i:hover .nav-card{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+    border-bottom: solid thin #e1e1e1;
+}
+
+nav i:hover .buy-card > button{
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    margin: 10px auto;
+    background-color: transparent;
+    border: solid thin #e1e1e1;
+    color: #494848;
+    cursor: pointer;
+}
+
+nav i:hover .buy-card > button:hover{
+    border: solid thin #494848;
+    transition: all .4s;
+
+}
+
+/* carrito de compras video 2 acomodar elementos del carrito */
+
+.lista-productos{
+    display: none;
+    text-align: center;
+    padding: 10px 0 0 0;
+    border-top:  solid thin grey;
+
+}
+
+nav i:hover .buy-card > .lista-productos{
+    display: flex;
+}
+
+.lista-productos img{
+    width: 100px;
+    
+}
+
+.lista-productos p{
+    width: 400px;
+    font-size: 1.3rem;
+}
+
+.lista-productos p:nth-child(4){
+    padding-left: 40px;
+}
+
+.lista-productos p:last-child span{
+    background-color: red;
+    border-radius: 50px;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+.switch{
+    width: 60px;
+    height: 30px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 100px;
+    border: #333 solid 2px;
+    background-color: #132b41;
+}
+
+.switch i{
+    font-size: 1rem;
+    color: #fdc21c;
+}
+
+.menu-options li:last-child::before{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: solid thin #000;
+    left: 0;
+    right: unset;
+}
+
+.menu-options li:last-child.active::before{
+    right: 0;
+    left: unset;
+    border: solid thin #fff;
+}
+
+/* para aclarar el sol */
+
+.menu-options li:last-child.active i:first-child{
+    color:#fff;
+}
+
+.menu-options li:last-child.active{
+    background-color: chocolate;
+    border: solid 2px #fff;
+}
+
+/* para el body cuando activo el dark */
+
+body.active{
+    background-color: #0e406e;
+}
+
+/* fondo video */
+
+.video{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+h1{
+    color: rgb(7, 7, 7);
+    font-family: "Dancing Script";
+    font-size: 5rem;
+    background-color: #e1e1e1;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.primero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 40px;
+}
+
+/* crads clase categorias */
+
+.categorias{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-categorias{
+    background-color: #f5e1ce;
+    width: 100%;
+    /* max-width: 1200px; */
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 25px;
+}
+
+.container-categorias .card1{
+    width: 286px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.2s;
+    background-color:#fff;
+
+}
+
+.container-categorias .card1:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+
+}
+
+.container-categorias .card1 img{
+    width: 330px;
+    height: 220px;
+}
+
+.container-categorias .card1 h3{
+    font-weight: 600;
+}
+.container-categorias .card1 p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+.container-categorias .card1 a{
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(240, 240, 245);
+}
+
+.imagen {
+    object-fit: contain; /* Mantiene la imagen completa, agregando espacios en blanco si es necesario */
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+  }
+
+.info{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 190px;
+    justify-content: space-evenly;
+    background-color: #fff;
+}
+
+.info h3{
+    padding: 10px;
+}
+.card .info .btn-1{
+    height: 20px;
+}
+
+.categoria{
+    padding: 10px;
+    width: 30%;
+    margin: auto;
+    background-color: #98b0b2;
+    border-radius: 10px;
+    border: none;
+}
+
+.categoria a{
+    text-decoration: none;
+    color: #ddd;
+}
+
+  /* productos */
+
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  .card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .card .precio {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    float: right;
+  }
+  
+  .card .boton-carrito {
+    background-color: #98b0b2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .card .boton-carrito:hover {
+    background-color: #0069d9;
+  }
+
+  .producto-ropa{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+  }
+
+.container-productos{
+    background-color: #f5e1ce;
+}
+
+#ropita{
+    text-align: center;
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Dancing Script";
+    margin: 25px 0px;
+    padding: 10px;
+}
+
+.card{
+    background-color: #fff;
+}
+
+#foo{
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Dancing Script";
+    
+}
+
+#noos{
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Dancing Script";
+    background-color: #e1edee;
+    margin: 25px 0px;
+    padding: 10px;
+}
+
+.vi{
+    height: 70vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f5e1ce;
+
+}
+
+.uno{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rojo{
+    padding: 10px;
+    background-color: #e1edee;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* carusel */
+
+#evento{
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Dancing Script";
+    background-color: #e1edee;
+    margin: 25px 0px;
+    padding: 10px;
+}
+  .container-carrusel{
+    /* width: 700px; y a slider-section img */
+    position: relative;
+    width: 900px; 
+    height: 500px;
+    background-color: #ffdcba;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.66);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .carrusel{
+    width: 500%;
+    height: 100%;
+    display: flex;
+  }
+
+  .slider-section{
+    width: calc(100% / 5);
+    height: 100%;
+
+
+  }
+
+  .slider-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .btn-left,
+  .btn-right{
+    display: flex;
+    position: absolute;
+    top:50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(2, 18, 32);
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+  }
+
+  .btn-left{
+    left: 10px;
+  }
+  .btn-right{
+    right: 10px;
+  }
+
+#pro{
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Dancing Script";
+    background-color: #e1edee;
+    margin: 25px 0px;
+    padding: 10px;
+    margin: 25px 0px;
+}
+
+#conta{
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Dancing Script";
+    background-color: #e1edee;
+    margin: 25px 0px;
+    padding: 10px;
+    margin: 25px 0px;
+}
+
+#cate{
+    text-align: center;
+    font-size: 4rem;
+    font-family: "Dancing Script";
+    background-color: #e1edee;
+    margin: 25px 0px;
+    padding: 10px;
+    margin: 25px 0px;
+}
